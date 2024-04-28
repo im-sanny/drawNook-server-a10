@@ -29,14 +29,15 @@ async function run() {
     //database
     const db = client.db("artsDB")
 
+
+
     const craftsCollection = db.collection("crafts")
+    const artCollection = db.collection("arts")
     // crafts
     app.get('/crafts', async(req, res) =>{
       const result = await craftsCollection.find({}).toArray();
       res.send(result);
-    })
-     
-    const artCollection = db.collection("arts")
+    })   
     // arts
     app.get('/arts', async(req, res) =>{
       const result = await artCollection.find({}).toArray();
@@ -44,6 +45,16 @@ async function run() {
     })
 
 
+// main section starts from here 
+
+
+    const addCrafts = db.collection("addCrafts")
+    app.post("/addCraft", async(req, res) =>{
+      console.log(req.body);
+      const result = await addCrafts.insertOne(req.body)
+      console.log(result);
+      res.send(result)
+    })
 
 
     // Send a ping to confirm a successful connection
