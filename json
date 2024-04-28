@@ -1,0 +1,112 @@
+[
+  {
+    "image": "https://i.ibb.co/br2QyTp/08d0f726-5f52-401f-995e-02bf6022c492.jpg",
+    "item_name": "Paintbrushes",
+    "subcategory_name": "Art Supplies",
+    "short_description": "Set of high-quality paintbrushes for various painting techniques.",
+    "price": 25.99,
+    "rating": 4.5,
+    "customization": "No",
+    "processing_time": "1-2 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/FVPx37F/b295956b-307e-4ff4-8f0b-6d04d1a9b80f.jpg",
+    "item_name": "Sketchbooks",
+    "subcategory_name": "Art Supplies",
+    "short_description": "Sketchbooks with durable covers for artists on the go.",
+    "price": 12.99,
+    "rating": 4.7,
+    "customization": "No",
+    "processing_time": "1-3 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/PCpq0hP/637391e7-05eb-4f0e-aae3-0c03703aba79.jpg",
+    "item_name": "Acrylic Paint Set",
+    "subcategory_name": "Painting Supplies",
+    "short_description": "Set of vibrant acrylic paint colors for artists of all levels.",
+    "price": 34.99,
+    "rating": 4.8,
+    "customization": "No",
+    "processing_time": "2-4 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/pLrSz9J/6b694dc7-11ad-451c-b147-d8d5f1658a4b.jpg",
+    "item_name": "Watercolor Starter Kit",
+    "subcategory_name": "Painting Supplies",
+    "short_description": "Beginner-friendly watercolor kit with essential tools and colors.",
+    "price": 29.99,
+    "rating": 4.6,
+    "customization": "No",
+    "processing_time": "1-3 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/7bycPzV/116d5920-625b-49a9-954c-f01807ecffbf.jpg",
+    "item_name": "Drawing Pencils",
+    "subcategory_name": "Drawing Supplies",
+    "short_description": "Set of professional-grade drawing pencils for precise artwork.",
+    "price": 18.99,
+    "rating": 4.4,
+    "customization": "No",
+    "processing_time": "1-2 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/gTNn525/9f91e1e9-3950-4ee0-b466-59b869b05773.jpg",
+    "item_name": "Canvas Panels",
+    "subcategory_name": "Art Supplies",
+    "short_description": "Pre-primed canvas panels for various painting projects.",
+    "price": 9.99,
+    "rating": 4.3,
+    "customization": "No",
+    "processing_time": "1-3 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/vwRJk3q/30421ec5-e709-4754-8389-4d7f2f6da1cc.jpg",
+    "item_name": "Art Prints",
+    "subcategory_name": "Artwork",
+    "short_description": "High-quality art prints of original paintings and illustrations.",
+    "price": 15.99,
+    "rating": 4.9,
+    "customization": "No",
+    "processing_time": "1-2 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/Pmq8Srh/e51e9393-f84e-4050-aa4d-c2baf7a4f461.jpg",
+    "item_name": "Instructional Books",
+    "subcategory_name": "Books",
+    "short_description": "Books with step-by-step tutorials and guides for aspiring artists.",
+    "price": 20.99,
+    "rating": 4.7,
+    "customization": "No",
+    "processing_time": "1-3 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/Hdvp5k2/7e2f3b75-baea-483a-8031-dceae02aa548.jpg",
+    "item_name": "Easels",
+    "subcategory_name": "Art Supplies",
+    "short_description": "Sturdy easels for displaying and working on art pieces.",
+    "price": 49.99,
+    "rating": 4.5,
+    "customization": "No",
+    "processing_time": "2-4 business days",
+    "stock_status": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/kQrbDpF/dac62c8b-a215-4a61-999d-3e3527e712fa.jpg",
+    "item_name": "Drawing Tablets",
+    "subcategory_name": "Digital Art",
+    "short_description": "Graphics tablets for digital drawing and illustration.",
+    "price": 129.99,
+    "rating": 4.8,
+    "customization": "No",
+    "processing_time": "3-5 business days",
+    "stock_status": "In stock"
+  }
+]
