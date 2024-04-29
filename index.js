@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
 require('dotenv').config()
@@ -46,13 +46,25 @@ async function run() {
 
 
 // main section starts from here 
-
-
     const addCrafts = db.collection("addCrafts")
+    
     app.post("/addCraft", async(req, res) =>{
       console.log(req.body);
       const result = await addCrafts.insertOne(req.body)
       console.log(result);
+      res.send(result)
+    })
+
+
+    app.get("/myCraft/:email", async(req, res) =>{
+      console.log(req.params.email);
+      const result = await addCrafts.find({email: req.params.email}).toArray();
+      res.send(result)
+    })
+
+    app.get("/singleArt/:id", async(req, res) => {
+      console.log(req.params.id);
+      const result = await addCrafts.findOne({_id: new ObjectId(req.params.id)})
       res.send(result)
     })
 
