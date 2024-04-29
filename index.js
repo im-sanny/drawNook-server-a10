@@ -28,6 +28,7 @@ async function run() {
     //database
     const db = client.db("artsDB");
 
+    
     const craftsCollection = db.collection("crafts");
     const artCollection = db.collection("arts");
     // crafts
@@ -73,8 +74,16 @@ async function run() {
       const data = {
         $set: {
           name: req.body.name,
-          price: req.body.price,
           itemName: req.body.itemName,
+          price: req.body.price,
+          email: req.body.email,
+          subcategory: req.body.subcategory,
+          imageURL: req.body.imageURL,
+          customization: req.body.customization,
+          status: req.body.status,
+          processingTime: req.body.processingTime,
+          rating: req.body.rating,
+          description: req.body.description,
         },
       };
       const result = await addCrafts.updateOne(query, data);
@@ -87,6 +96,12 @@ async function run() {
         _id: new ObjectId(req.params.id),
       });
       console.log(result);
+      res.send(result);
+    });
+
+    const allCrafts = db.collection("addCrafts");
+    app.get("/addCrafts", async (req, res) => {
+      const result = await allCrafts.find({}).toArray();
       res.send(result);
     });
 
