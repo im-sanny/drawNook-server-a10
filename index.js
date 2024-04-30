@@ -28,7 +28,12 @@ async function run() {
     //database
     const db = client.db("artsDB");
 
-    
+    const subCollection = db.collection('subcategories')
+    app.get('/subcategories', async(req, res) => {
+      const result = await subCollection.find({}).toArray();
+      res.send(result)
+    })
+
     const craftsCollection = db.collection("crafts");
     const artCollection = db.collection("arts");
     // crafts
@@ -105,6 +110,8 @@ async function run() {
       res.send(result);
     });
 
+      // subcategory
+    
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
