@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000;
 
 //middleware
 const corsConfig = {
-  origin: ["http://localhost:5173","https://drawnook-a10.web.app"],
+  origin: ["http://localhost:5173", "https://drawnook-a10.web.app"],
   credentials: true,
 };
 app.use(cors(corsConfig));
@@ -41,11 +41,15 @@ async function run() {
     //database
     const db = client.db("artsDB");
 
-    const subCollection = db.collection("subcategories");
-    app.get("/subcategories", async (req, res) => {
-      const result = await subCollection.find({}).toArray();
+    // subcategory
+    const categoryCollection = db.collection("subcategory");
+    app.get("/subcategory", async (req, res) => {
+      const result = await categoryCollection.find({}).toArray();
       res.send(result);
     });
+
+
+
 
     const craftsCollection = db.collection("crafts");
     const artCollection = db.collection("arts");
@@ -122,8 +126,6 @@ async function run() {
       const result = await allCrafts.find({}).toArray();
       res.send(result);
     });
-
-    // subcategory
 
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
