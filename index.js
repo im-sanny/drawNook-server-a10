@@ -6,7 +6,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //middleware
-app.use(cors());
+const corsConfig = {
+  origin: ["http://localhost:5173","https://drawnook-a10.web.app"],
+  credentials: true,
+};
+app.use(cors(corsConfig));
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.96corz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
@@ -21,18 +25,27 @@ const client = new MongoClient(uri, {
   },
 });
 
+client
+  .connect()
+  .then(() => {
+    console.log("MongoDB Connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
 
     //database
     const db = client.db("artsDB");
 
-    const subCollection = db.collection('subcategories')
-    app.get('/subcategories', async(req, res) => {
+    const subCollection = db.collection("subcategories");
+    app.get("/subcategories", async (req, res) => {
       const result = await subCollection.find({}).toArray();
-      res.send(result)
-    })
+      res.send(result);
+    });
 
     const craftsCollection = db.collection("crafts");
     const artCollection = db.collection("arts");
@@ -110,8 +123,8 @@ async function run() {
       res.send(result);
     });
 
-      // subcategory
-    
+    // subcategory
+
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
