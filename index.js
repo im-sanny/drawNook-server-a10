@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000;
 
 //middleware
 const corsConfig = {
-  origin: ["http://localhost:5173", "https://drawnook-a10.web.app"],
+  origin: ["http://localhost:5173", "https://drawnook-a10.web.app", "http://localhost:5175"],
   credentials: true,
 };
 app.use(cors(corsConfig));
@@ -91,7 +91,7 @@ async function run() {
     });
 
     app.put("/updateArt/:id", async (req, res) => {
-      console.log(req.params.id);
+      console.log('data', req.params.id);
       const query = { _id: new ObjectId(req.params.id) };
       const data = {
         $set: {
@@ -114,6 +114,7 @@ async function run() {
     });
 
     app.delete("/delete/:id", async (req, res) => {
+      console.log('delete', req.params.id);
       const result = await addCrafts.deleteOne({
         _id: new ObjectId(req.params.id),
       });
